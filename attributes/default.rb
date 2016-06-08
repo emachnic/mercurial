@@ -8,5 +8,6 @@ when "windows"
     default['hg']['windows_arch'] = "x86"
   end
   default['hg']['version'] = "2.4.0"
-  default['hg']['windows_url'] = "http://mercurial.selenic.com/release/windows/mercurial-#{node['hg']['version']}-#{node['hg']['windows_arch']}.msi"
+  default['hg']['windows_base_url'] = 'https://www.mercurial-scm.org/release/windows/mercurial-'
+  default['hg']['windows_url'] = "#{node['hg']['windows_base_url']}#{node['hg']['version']}-#{node['hg']['windows_arch']}.msi"
 end
